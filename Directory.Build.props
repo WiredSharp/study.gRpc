@@ -1,0 +1,16 @@
+<Project>
+  <PropertyGroup>
+    <!-- To be resolved from nuget package version  see https://github.com/zericco/Study.VersionUpdater -->
+    <VersionMajor Condition="'$(VersionMajor)'==''">0</VersionMajor>
+    <VersionMinor Condition="'$(VersionMinor)'==''">1</VersionMinor>
+    <VersionPatch Condition="'$(VersionPatch)'==''">0-alpha</VersionPatch>
+    <Authors>EBL</Authors>
+    <Company>EBL Inc.</Company>
+    <Product>EBL.Study.gRpc</Product>
+    <Version  Condition="'$(Version)'==''">$(VersionMajor).$(VersionMinor).$(VersionPatch)</Version>
+    <AssemblyVersion>$(VersionMajor).0.0.0</AssemblyVersion>
+    <FileVersion>$(VersionMajor).0.0.0</FileVersion>
+    <SolutionDir Condition=" '$(SolutionDir)' == '' ">$(MSBuildThisFileDirectory)</SolutionDir>
+    <BaseIntermediateOutputPath>$(SolutionDir)!obj\$(MSBuildProjectName)\</BaseIntermediateOutputPath>
+  </PropertyGroup>
+</Project>
